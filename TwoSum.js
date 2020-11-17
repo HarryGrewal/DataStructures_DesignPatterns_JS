@@ -23,3 +23,14 @@ const twoSum = function (nums, target) {
         map.set(nums[i], i);
     }
 };
+
+
+const twoSum2 = function(nums, target) {
+    const comp = {};
+    for(let i=0; i<nums.length; i++){
+        if(comp[nums[i] ]>=0){
+            return [ comp[nums[i] ] , i]
+        }
+        comp[target-nums[i]] = i
+    }
+};
